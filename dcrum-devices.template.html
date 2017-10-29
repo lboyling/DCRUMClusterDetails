@@ -50,12 +50,58 @@
 	</div>
 </div>
 <div class="detailpane" ng-show="isDetailShown">
-<div><span><a href="https://192.168.2.103:4183/console/devices/index.xhtml?deviceId={{device.id}}" target="_blank">View this device in the RUM Console</a></div>
-<span class="detailheader">{{device.type}} Log location</span> 
+
+<div class="col1">
+<span class="detailheader">System properties</span> 
+<div class="propertygroup"><span class="propertyheader">System status:</span><span style="color: green;" title="This server is currently running">Operational</span></div>
+<div class="propertygroup"><span class="propertyheader">System uptime:</span><span>13 days, 4 hours and 6 minutes</span></div>
+<div class="propertygroup"><span class="propertyheader">Hostname</span><span>pointman.mynetgear.com</span></div>
+<div class="propertygroup"><span class="propertyheader">CI name:</span><span>CI-HP-DCRUM-Pointman</span></div>
+<div class="propertygroup"><span class="propertyheader">Server hostname:</span><span>MYHOST1</span></div>
+<div class="propertygroup"><span class="propertyheader">Service tag:</span><span>GXHKM3S</span></div>
+
+<div class="propertygroup"><span class="propertyheader">iDRAC IP:</span><span>https://192.168.2.1</span></div>
+<div class="propertygroup"><span class="propertyheader">iDRAC URL:</span><span>https://pointman-mgmt.my.domain.local</span></div>
+
+<span class="detailheader">Hardware resources</span> 
+<div class="propertygroup"><span class="propertyheader">CPU model</span><span>Intel Core i7 E7420 @ 2.78Ghz</span></div>
+<div class="propertygroup"><span class="propertyheader">CPU cores</span><span>12</span></div>
+<div class="propertygroup"><span class="propertyheader">Memory:</span><span>256GB</span></div>
+<div class="propertygroup"><span class="propertyheader">Hard disks:</span><span>6&nbsp;x&nbsp;400GB&nbsp;SSD</span></div>
+<div class="propertygroup"><span class="propertyheader">Disk space usable:</span><span>1.6&nbsp;TB</span></div>
+</div>
+<div class="col2">
+<span class="detailheader">External links</span> 
+<ul class="devicelinks">
+<li><a href="https://192.168.2.103:4183/console/devices/index.xhtml?deviceId={{device.id}}" target="_blank">Open CAS in new window</a></li>
+<ul>
+<li><a href="https://192.168.2.103:4183/console/devices/index.xhtml?deviceId={{device.id}}" target="_blank">Open CAS Administrative console in new window</a></li>
+<li><a href="https://192.168.2.103:4183/console/devices/index.xhtml?deviceId={{device.id}}" target="_blank">Open CAS Commands console in new window</a></li>
+<li><a href="https://192.168.2.103:4183/console/devices/index.xhtml?deviceId={{device.id}}" target="_blank">Open CAS Log console in new window</a></li>
+<li><a href="https://192.168.2.103:4183/console/devices/index.xhtml?deviceId={{device.id}}" target="_blank">Open CAS System status report in new window</a></li>
+</ul>
+<li><a href="https://192.168.2.103:4183/console/devices/index.xhtml?deviceId={{device.id}}" target="_blank">Open device in RUM Console</a></li>
+
+</ul>
+
+<ul class="devicelinks">
+<li><a href="https://192.168.2.103:4183/console/devices/index.xhtml?deviceId={{device.id}}" target="_blank">Open RUM Console</a></li>
+<ul>
+<li><a href="https://192.168.2.103:4183/console/devices/index.xhtml?deviceId={{device.id}}" target="_blank">Devices</a></li>
+<li><a href="https://192.168.2.103:4183/console/devices/index.xhtml?deviceId={{device.id}}" target="_blank">Software services</a></li>
+<li><a href="https://192.168.2.103:4183/console/devices/index.xhtml?deviceId={{device.id}}" target="_blank">Locations</a></li>
+<li><a href="https://192.168.2.103:4183/console/devices/index.xhtml?deviceId={{device.id}}" target="_blank">Alerts</a></li>
+<li><a href="https://192.168.2.103:4183/console/devices/index.xhtml?deviceId={{device.id}}" target="_blank">Users</a></li>
+<li><a href="https://192.168.2.103:4183/console/devices/index.xhtml?deviceId={{device.id}}" target="_blank">User groups</a></li>
+<li><a href="https://192.168.2.103:4183/console/devices/index.xhtml?deviceId={{device.id}}" target="_blank">Licenses</a></li>
+</ul>
+</ul>
+</div>
+<span class="detailheader">[{{device.type}}] {{device.name}} folder locations</span> 
 <!--
 <div class="pathgroup"><span class="pathheader">Local:</span></div><div class="pathgroup"><span class="pathheader">Remote:</span></div>-->
 <div class="pathtable">
-
+<div class="pathgroup"><span class="pathheader">Local:</span><span class="path">C:\Program Files\Dynatrace\{{device.type}}</span></div>
 <div class="pathgroup"><span class="pathheader">Local:</span><span class="path">C:\Program Files\Dynatrace\{{device.type}}</span></div><div class="pathgroup"><span class="pathheader">Remote:</span><span class="path">\\WIN-34HJNTJFJ56\C$\Program Files\Dynatrace\{{device.type}}</span></div>
 </table>
 </div>

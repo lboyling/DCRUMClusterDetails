@@ -15,7 +15,18 @@ angular.
 		  type: 'CAS',
 		  version: '17.0.2.44',
 		  secureConn: true,
-		  id:1
+		  id:1,
+		  servicetag: "GXBAC"
+		},
+		{
+		  name: 'RUM Console',
+		  hostname: 'pointman.mynetgear.com',
+		  ip: '192.168.2.103',
+		  port: '4183',
+		  type: 'Console',
+		  version: '17.0.2.29',
+		  secureConn: true,
+		  id:0
 		},
 		{
 		  name: 'ADS Server 1',
