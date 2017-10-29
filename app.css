@@ -1,12 +1,14 @@
+html,body{min-height:100%;}
 body
 {
-		font-family: 'Bernina Sans', 'Arial', sans-serif
+		font-family: 'Bernina Sans', 'Arial', sans-serif;
 }
-.divtable
+.divtable, #filterPanel
 {
 		 margin: 0 auto;
 		 width: 1300px;
 }
+
 .deviceRow
 {
 	background-color: #f8f8f8;
@@ -14,10 +16,11 @@ body
 	border-radius: 3px;
 	margin: 5px 0px 5px 0px;
 	padding: 5px;
+	padding-top: 5px;
 }
 .deviceRow:hover
 {
-		background-color: #d8d8d8 !important;
+		background-color: PaleTurquoise !important;
 	cursor: pointer !important;
 }
 .datarow{
@@ -26,7 +29,7 @@ body
 .datarow:hover
 {
 		
-		background-color: grey;
+		background-color: PaleTurquoise;
 }
 .header
 {
@@ -89,9 +92,10 @@ body
 
 .detailpane
 {
-		
+		background-color: #f8f8f8;
 		padding: 20px;
 		text-align: center;
+		border-radius: 3px;
 }
 .path
 {
@@ -125,7 +129,9 @@ body
 }
 .overview
 {
-		padding-bottom: 5px;
+		margin-bottom: 10px;
+		margin-top: 10px;
+		
 }
 .showDetaillink
 {
@@ -138,4 +144,44 @@ body
 		color: navy;
 		text-decoration: underline;
 		
+}
+.highlighted
+{
+		background-color: yellow;
+}
+#filterinput
+{
+	width: 1260px;
+	margin: 15px;
+	font-size: 20px;
+	
+  -moz-box-sizing: border-box;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid grey;
+}
+#filterPanel h3, #filterPanel span, #filterPanel p, #filterPanel h1
+{
+	padding: 0.5em;
+	margin: 10px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+#filterPanel {
+		background: PaleTurquoise;
+		padding-bottom: 10px;
+}
+#filterPanel h1
+{
+		margin-left: 0px;
+}
+body
+{
+     background: -moz-linear-gradient(90deg, #66D2D4 0%, #008080 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #008080), color-stop(100%, #66D2D4)); /* safari4+,chrome */
+    background: -webkit-linear-gradient(90deg, #66D2D4 0%, #008080 100%); /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(90deg, #66D2D4 0%, #008080 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(90deg, #66D2D4 0%, #008080 100%); /* ie10+ */
+    background: linear-gradient(0deg, #66D2D4 0%, #008080 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008080', endColorstr='#66D2D4',GradientType=0 ); /* ie6-9 */ 
 }

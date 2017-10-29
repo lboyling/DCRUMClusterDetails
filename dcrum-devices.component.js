@@ -38,6 +38,34 @@ angular.
 		  id:6
 		}
 		];
+		this.testitem = 
+		{
+		  name: 'AMD Server 1',
+		  hostname: 'pointman.mynetgear.com',
+		  ip: '192.168.2.113',
+		  port: '443',
+		  type: 'AMD',
+		  version: '17.0.2.49',
+		  secureConn: true,
+		  id:6
+		};
+		for (var j=3; j<15; j++) {
+			var testitem = 
+				{
+				  name: 'AMD Server ' + j,
+				  hostname: 'pointman.mynetgear.com',
+				  ip: '192.168.2.113',
+				  port: 443 + j,
+				  type: 'AMD',
+				  version: '17.0.2.49',
+				  secureConn: true,
+				  id: j
+				};
+			
+			this.devices.push(testitem);
+		};
+		this.clusterName = "Home Lab Environment"
+		
 		this.deviceIncludes = [];
     
 		this.includeDevice = function(type) {
@@ -62,4 +90,12 @@ angular.
     }
 	}
 	
-});
+}).filter('highlight', function($sce) {
+		return function(text, phrase) {
+		  if (phrase) {
+			text = text.replace(new RegExp('(' + phrase + ')', 'gi'),
+			  '<span class="highlighted">$1</span>');
+		  }
+		  return $sce.trustAsHtml(text)
+		}
+	  });
