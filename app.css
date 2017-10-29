@@ -1,0 +1,141 @@
+body
+{
+		font-family: 'Bernina Sans', 'Arial', sans-serif
+}
+.divtable
+{
+		 margin: 0 auto;
+		 width: 1300px;
+}
+.deviceRow
+{
+	background-color: #f8f8f8;
+	border: 1px solid black;
+	border-radius: 3px;
+	margin: 5px 0px 5px 0px;
+	padding: 5px;
+}
+.deviceRow:hover
+{
+		background-color: #d8d8d8 !important;
+	cursor: pointer !important;
+}
+.datarow{
+	clear:both;
+}
+.datarow:hover
+{
+		
+		background-color: grey;
+}
+.header
+{
+		border: 1px solid black;
+	border-radius: 3px;
+	margin: 5px 0px 5px 0px;
+		text-align:justify;
+		background-color: rgb(194, 217, 192);
+}
+.colHeader, .colCell
+{
+	display: inline-block;
+	padding: 0.5em 0.5em 0.5em 0.5em;
+}
+.colHeader
+{
+	
+	text-align: center;
+	font-weight: bold;
+}
+.colCell
+{
+	cursor: pointer;
+	text-align: center;
+}
+.name
+{
+		width: 120px;
+}
+.hostname
+{
+	width: 200px;
+}
+.ip
+{
+	width: 120px;
+}
+.port
+{
+	width: 60px;
+	text-align: right;
+}
+.type
+{
+	width: 60px;
+}
+.version 
+{
+	
+}
+.showDetail
+{
+	float: right;
+	text-align: right;
+}
+#resultCount
+{
+	padding-left: 20px;
+}
+
+.detailpane
+{
+		
+		padding: 20px;
+		text-align: center;
+}
+.path
+{
+		font-family: monospace;
+}
+.pathtable
+{
+		text-align: left;
+		display: flex;
+		padding: 20px;
+}
+.pathheader
+{
+		padding-right: 10px;
+		font-weight: bold;
+		display: inline-flex;
+}
+.pathgroup
+
+{
+		width: 50%;
+}
+.detailheader
+{
+		display: inline-block;
+		align: center;
+		width: 100%;
+		margin: 0 auto;
+		font-weight: bold;
+		text-decoration: underline;
+}
+.overview
+{
+		padding-bottom: 5px;
+}
+.showDetaillink
+{
+		color: navy;
+		text-decoration: underline;
+		
+}
+.hideDetaillink
+{
+		color: navy;
+		text-decoration: underline;
+		
+}

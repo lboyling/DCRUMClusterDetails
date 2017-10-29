@@ -1,0 +1,58 @@
+<div id="devices-list">
+<div id="filter" style="background: lightgrey;">
+	<label>Search any field</label><input ng-model="$ctrl.query.$" />
+	<label>Search server name</label><input ng-model="$ctrl.query.name" />
+	<div id="devicetype" ng-init="devicetypes = (devices)">
+	<p>Select device type</p>
+		<ul>
+			<li nd-repeat="type in devicetypes"><span>{{$}}</span></li>
+		</ul>
+			
+	</div>
+</div>
+
+<div class="container">
+
+<div class="divtable">
+<div class="overview">
+<span>Total number of devices: {{$ctrl.devices.length}}</span>
+<span id="resultCount" ng-show="filtered.length < $ctrl.devices.length">Number of selected devices: {{filtered.length}}</span>
+</div>
+<div class="header">
+<div class="colHeader name">Device name</div>
+<div class="colHeader hostname">Hostname</div>
+<div class="colHeader ip">IP address</div>
+<div class="colHeader port">Port</div>
+<div class="colHeader type">Type</div>
+<div class="colHeader version">Version</div></div>
+<div class="deviceRow" ng-repeat="device in $ctrl.devices | filter:$ctrl.query:deviceFilter as filtered">
+<div class="dataRow" ng-click="isDetailShown = !isDetailShown">
+	<div class="colCell name">{{device.name}}</div>
+	<div class="colCell hostname">{{device.hostname}}</div>
+	<div class="colCell ip">{{device.ip}}</div>
+	<div class="colCell port">{{device.port}}<img class="secureConnection secureConnection_true" src="VisualEditor_-_Icon_-_Secure-link.svg" width="16px" ng-show="{{device.secureConn}}" style="padding-left: 5px;" title="This device uses HTTPS to communicate"/><img class="secureConnection secureConnection_false" src="VisualEditor_-_Icon_-_InSecure-link.svg" width="16px" ng-show="!{{device.secureConn}}" style="padding-left: 5px;" title="This device does not use HTTPS to communicate"/></div>
+	<div class="colCell type">{{device.type}}</div>
+	<div class="colCell version">{{device.version}}
+		<span style="font-size: smaller; color: green; padding-left: 5px;">GA</span>
+		<span style="font-size: smaller; color: coral; padding-left: 5px;">Newer release available</span>
+		<span style="font-size: smaller; color: royalblue; padding-left: 5px;">Pre-release build</span>
+		<span style="font-size: smaller; color: crimson; padding-left: 5px;">Unsupported</span>
+	</div>
+	<div class="colCell showDetail">
+		<span class="showDetaillink"  ng-show="!isDetailShown" ng-click="$parent.isDetailShown = true">Show details</span>
+		<span class="hideDetaillink"  ng-show="isDetailShown" ng-click="$parent.isDetailShown =false">Hide details</span>
+	</div>
+</div>
+<div class="detailpane" ng-show="isDetailShown">
+<div><span><a href="https://192.168.2.103:4183/console/devices/index.xhtml?deviceId={{device.id}}">View this device in the RUM Console</a></div>
+<span class="detailheader">{{device.type}} Log location</span> 
+<!--
+<div class="pathgroup"><span class="pathheader">Local:</span></div><div class="pathgroup"><span class="pathheader">Remote:</span></div>-->
+<div class="pathtable">
+
+<div class="pathgroup"><span class="pathheader">Local:</span><span class="path">C:\Program Files\Dynatrace\{{device.type}}</span></div><div class="pathgroup"><span class="pathheader">Remote:</span><span class="path">\\WIN-34HJNTJFJ56\C$\Program Files\Dynatrace\{{device.type}}</span></div>
+</table>
+</div>
+</div>
+</div>
+</div>
